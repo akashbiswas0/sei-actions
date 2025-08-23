@@ -1,36 +1,146 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sei Actions
 
-## Getting Started
+AI-powered payment link generation platform built on the Sei Network. Create intelligent payment links with beautiful custom interfaces powered by artificial intelligence.
 
-First, run the development server:
+## Features
 
+### Core Functionality
+- **AI-Powered Link Generation**: Create payment links using natural language prompts powered by AI
+- **Custom Payment Interfaces**: Generate beautiful, modern payment pages with AI-generated designs
+- **One-Click Payments**: Execute transactions seamlessly with connected wallets
+- **Payment Management**: Create, manage, and track multiple payment links
+
+### Wallet Integration
+- **RainbowKit Support**: Modern wallet connection with multiple wallet support
+- **Wagmi Integration**: Full EVM compatibility with React hooks
+- **Sei Network**: Native support for Sei testnet and mainnet
+
+## Architecture
+
+### Frontend (Next.js 14)
+- **React 18** with TypeScript
+- **Tailwind CSS** for modern, responsive styling
+- **App Router** with client-side routing
+- **RainbowKit** for wallet connections
+- **Wagmi** for blockchain interactions
+
+### Backend Services
+- **API Routes** for payment link management and payments
+- **Supabase** for data persistence and real-time updates
+- **AI Integration** for intelligent content generation
+
+### Blockchain Integration
+- **Sei Network** for fast, low-cost transactions
+- **EVM Compatibility** for seamless wallet integration
+- **Native SEI Transfers** with secure transaction handling
+
+## Sei Network Integration
+
+### Network Configuration
+- **Testnet**: Chain ID 1328 (Sei Testnet)
+- **Mainnet**: Chain ID 713715 (Sei Mainnet)
+- **RPC URLs**: Official Sei Network endpoints
+- **Currency**: SEI (18 decimals)
+
+### Transaction Features
+- **Native SEI Transfers**: Direct cryptocurrency transfers
+- **EVM Compatibility**: Full Ethereum Virtual Machine support
+- **Fast Confirmations**: Sub-second transaction finality
+- **Low Fees**: Cost-effective transaction processing
+
+## Setup Instructions
+
+### Prerequisites
+- **Node.js 18+**
+- **npm or yarn**
+- **Supabase account**
+- **WalletConnect Project ID** (for wallet connections)
+
+### 1. Clone Repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/yourusername/Sei Actions
+cd Sei Actions
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Install Dependencies
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Environment Configuration
+Create a `.env.local` file with the following variables:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```env
+# WalletConnect Configuration
+NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID=your_walletconnect_project_id
 
-## Learn More
+# Database Configuration
+SUPABASE_URL=your_supabase_url
+SUPABASE_ANON_KEY=your_supabase_anon_key
 
-To learn more about Next.js, take a look at the following resources:
+# Optional: AI Integration
+OPENAI_API_KEY=your_openai_api_key
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 4. Start Development Server
+```bash
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The application will be available at `http://localhost:3000`
 
-## Deploy on Vercel
+### 5. Production Build
+```bash
+npm run build
+npm start
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Sei Network Configuration
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The application is configured to work with Sei networks:
+
+### Testnet
+- **Chain ID**: 1328
+- **Network**: Sei Testnet
+- **RPC URL**: https://evm-rpc-testnet.sei-apis.com
+- **Explorer**: https://testnet.seistream.app
+
+### Mainnet
+- **Chain ID**: 713715
+- **Network**: Sei Mainnet
+- **RPC URL**: https://evm-rpc.sei-apis.com
+- **Explorer**: https://seistream.app
+
+## Wallet Integration
+
+### Supported Wallets
+- **MetaMask**: Most popular Ethereum wallet
+- **WalletConnect**: Multi-wallet support
+- **Rainbow**: Modern wallet experience
+- **Any EVM-compatible wallet**
+
+### Connection Features
+- **Automatic Network Detection**: Seamless Sei network switching
+- **Secure Transactions**: Client-side transaction signing
+- **Real-time Updates**: Live wallet state management
+- **Transaction History**: Complete payment tracking
+
+## How It Works
+
+### 1. Create Payment Links
+- **Describe your payment** using natural language
+- **AI generates** custom payment interface
+- **Customize details** like title, amount, and description
+- **Save and share** your payment link
+
+### 2. Execute Payments
+- **Recipients visit** the payment link
+- **Connect their wallet** using RainbowKit
+- **Review payment details** and confirm
+- **Execute transaction** on Sei Network
+
+### 3. Track & Manage
+- **View payment history** for all your links
+- **Monitor transaction status** in real-time
+- **Access Sei explorer** for detailed transaction info
+
